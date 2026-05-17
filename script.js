@@ -1,42 +1,48 @@
-function copyIP() {
+// script.js
+
+function copyIP(){
     navigator.clipboard.writeText("play.fluxsmp.com");
-    alert("Server IP copied!");
-}
 
-const reveals = document.querySelectorAll('.reveal');
+    const btns = document.querySelectorAll(".primary-btn");
 
-function revealOnScroll() {
-    const trigger = window.innerHeight * 0.85;
+    btns.forEach(btn=>{
+        const original = btn.innerHTML;
 
-    reveals.forEach(reveal => {
-        const top = reveal.getBoundingClientRect().top;
-
-        if(top < trigger) {
-            reveal.classList.add('active');
-        }
+        btn.innerHTML = "Copied!";
+        
+        setTimeout(()=>{
+            btn.innerHTML = original;
+        },1500);
     });
 }
 
-window.addEventListener('scroll', revealOnScroll);
-revealOnScroll();
+const glow = document.querySelector(".mouse-glow");
 
-async function fetchServerStatus() {
-    try {
-        const response = await fetch(
-            'https://api.mcsrvstat.us/2/play.hypixel.net'
-        );
+document.addEventListener("mousemove",(e)=>{
 
-        const data = await response.json();
+    glow.style.left = e.clientX + "px";
+    glow.style.top = e.clientY + "px";
 
-        if(data.online) {
-            document.getElementById('server-status').textContent = '🟢 Online';
-            document.getElementById('player-count').textContent = data.players.online;
-        } else {
-            document.getElementById('server-status').textContent = '🔴 Offline';
+});
+
+const reveals = document.querySelectorAll(".reveal");
+
+function revealScroll(){
+
+    const trigger = window.innerHeight * 0.85;
+
+    reveals.forEach(el=>{
+
+        const top = el.getBoundingClientRect().top;
+
+        if(top < trigger){
+            el.classList.add("active");
         }
-    } catch(err) {
-        document.getElementById('server-status').textContent = 'Error';
-    }
+
+    });
+
 }
 
-fetchServerStatus();
+window.addEventListener("scroll", revealScroll);
+
+revealScroll();
