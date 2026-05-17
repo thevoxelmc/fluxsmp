@@ -1,80 +1,233 @@
+<!-- index.html -->
 <!DOCTYPE html>
-                PvP, challenges, drops, and community-wide events.
-            </p>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FluxSMP</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="mouse-glow"></div>
+
+<div class="bg-grid"></div>
+
+<header class="navbar">
+    <div class="logo">
+        ⚡ FluxSMP
+    </div>
+
+    <nav>
+        <a href="#features">Features</a>
+        <a href="#stats">Stats</a>
+        <a href="#faq">FAQ</a>
+        <a href="#join">Join</a>
+    </nav>
+</header>
+
+<section class="hero">
+
+    <div class="floating floating-1"></div>
+    <div class="floating floating-2"></div>
+
+    <div class="hero-content reveal">
+
+        <span class="badge">
+            SEASON ONE
+        </span>
+
+        <h1>
+            Chaos.<br>
+            Luck.<br>
+            Flux.
+        </h1>
+
+        <p>
+            A modern survival SMP with seasonal twists,
+            custom events, PvP, community chaos,
+            and polished survival gameplay.
+        </p>
+
+        <div class="hero-buttons">
+
+            <button class="primary-btn" onclick="copyIP()">
+                Copy IP
+            </button>
+
+            <a class="secondary-btn" href="#">
+                Join Discord
+            </a>
+
         </div>
 
-        <div class="glass-card reveal">
-            <h3>✨ QoL Features</h3>
+        <div class="server-panel">
+
+            <div class="server-card">
+                <small>Status</small>
+                <h3 id="status">🟢 Online</h3>
+            </div>
+
+            <div class="server-card">
+                <small>Players</small>
+                <h3 id="players">127</h3>
+            </div>
+
+            <div class="server-card">
+                <small>Version</small>
+                <h3>1.21.x</h3>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="features">
+
+    <div class="section-header reveal">
+        <span>FEATURES</span>
+        <h2>Why FluxSMP?</h2>
+    </div>
+
+    <div class="features-grid">
+
+        <div class="glass reveal">
+            <h3>🎲 Seasonal Twists</h3>
+
             <p>
-                RTP, TPA, Infinite Trades, and polished survival gameplay.
+                Every season changes gameplay
+                with fresh mechanics and chaos.
             </p>
         </div>
-    </div>
-</section>
 
-<section class="gallery section" id="gallery">
-    <div class="section-header reveal">
-        <span>SCREENSHOTS</span>
-        <h2>Inside FluxSMP</h2>
-    </div>
+        <div class="glass reveal">
+            <h3>⚔️ Community Events</h3>
 
-    <div class="gallery-grid">
-        <img class="reveal" src="assets/gallery1.jpg">
-        <img class="reveal" src="assets/gallery2.jpg">
-        <img class="reveal" src="assets/gallery3.jpg">
-    </div>
-</section>
-
-<section class="staff section" id="staff">
-    <div class="section-header reveal">
-        <span>TEAM</span>
-        <h2>Meet The Staff</h2>
-    </div>
-
-    <div class="staff-grid">
-        <div class="staff-card reveal">
-            <img src="https://mc-heads.net/avatar/Notch">
-            <h3>Owner</h3>
-            <p>Jatin</p>
+            <p>
+                PvP tournaments, drops,
+                random events, and wars.
+            </p>
         </div>
 
-        <div class="staff-card reveal">
-            <img src="https://mc-heads.net/avatar/Dinnerbone">
-            <h3>Admin</h3>
-            <p>Flux Team</p>
+        <div class="glass reveal">
+            <h3>✨ Quality of Life</h3>
+
+            <p>
+                RTP, TPA, InfiniteTrades,
+                and polished survival systems.
+            </p>
         </div>
+
+        <div class="glass reveal">
+            <h3>🌍 Crossplay</h3>
+
+            <p>
+                Java and Bedrock support
+                so everyone can join.
+            </p>
+        </div>
+
     </div>
+
 </section>
 
-<section class="faq section" id="faq">
+<section class="section" id="stats">
+
+    <div class="section-header reveal">
+        <span>COMMUNITY</span>
+        <h2>Server Statistics</h2>
+    </div>
+
+    <div class="stats-grid">
+
+        <div class="stats-card reveal">
+            <h1>24/7</h1>
+            <p>Server Uptime</p>
+        </div>
+
+        <div class="stats-card reveal">
+            <h1>1.21</h1>
+            <p>Latest Version</p>
+        </div>
+
+        <div class="stats-card reveal">
+            <h1>100+</h1>
+            <p>Active Players</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="faq">
+
     <div class="section-header reveal">
         <span>FAQ</span>
         <h2>Questions?</h2>
     </div>
 
-    <div class="faq-container">
-        <div class="faq-item reveal">
-            <h3>What version is supported?</h3>
-            <p>Java & Bedrock on 1.21.x</p>
-        </div>
+    <div class="faq-wrap">
 
         <div class="faq-item reveal">
-            <h3>Is the server cracked?</h3>
-            <p>Your choice.</p>
+            <h3>Is FluxSMP crossplay?</h3>
+            <p>Yes — Java and Bedrock supported.</p>
         </div>
 
         <div class="faq-item reveal">
             <h3>Does the server reset?</h3>
-            <p>Each season introduces fresh gameplay.</p>
+            <p>Each season introduces new mechanics and gameplay.</p>
         </div>
+
+        <div class="faq-item reveal">
+            <h3>Is there PvP?</h3>
+            <p>Yes — wars, PvP, events, and chaos are encouraged.</p>
+        </div>
+
     </div>
+
+</section>
+
+<section class="join-section" id="join">
+
+    <div class="join-card reveal">
+
+        <h2>
+            Ready To Join FluxSMP?
+        </h2>
+
+        <p>
+            Join the chaos today and become part
+            of the next season.
+        </p>
+
+        <button class="primary-btn" onclick="copyIP()">
+            Copy Server IP
+        </button>
+
+    </div>
+
 </section>
 
 <footer>
+
     <h2>⚡ FluxSMP</h2>
-    <p>Powered by chaos.</p>
+
+    <p>
+        Powered by chaos.
+    </p>
+
 </footer>
 
 <script src="script.js"></script>
+
 </body>
 </html>
